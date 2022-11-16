@@ -3,6 +3,15 @@ bool isValidID(id) {
 }
 
 bool isInteger(num value) => (value % 1) == 0;
+bool isStringInteger(String value) {
+  try {
+    int.tryParse(value);
+    return true;
+  } catch (e) {
+    print(e);
+    return false;
+  }
+}
 
 int countPiece(String piece, String arrngs) {
   return (RegExp(piece).allMatches(arrngs).toList().length);
