@@ -2,9 +2,11 @@
 
 A Fischer Random Chess / Chess960 dart/flutter library.
 
-## Story
+## Description
 [Fischer random](https://en.wikipedia.org/wiki/Fischer_random_chess) chess, also known as Chess960 is a variation of the game of chess invented by the former world chess champion Bobby Fischer
+The idea of Fischer Random is to randomize the starting position of the pieces, so that openings may not be memorized.
 
+“I love chess, and I didn’t invent Fischer random chess to destroy chess. I invented Fischer Random Chess to keep chess going”. – Bobby Fischer
 
 ## Installation
 
