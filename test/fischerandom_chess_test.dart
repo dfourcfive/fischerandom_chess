@@ -1,12 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:fischerandom_chess/fischerandom_chess.dart';
+import 'package:fischerandom_chess/fischerandom_chess.dart' as frc;
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-  });
+  frc.FischeRandomChess fischeRandomChess = frc.FischeRandomChess();
+  frc.FischerRandomLookUp fischerRandomLookUp = frc.FischerRandomLookUp();
+
+  var random = fischerRandomLookUp.random();
+  var randomID = fischerRandomLookUp.randomID();
+  var decodeResult = fischerRandomLookUp.decode(randomID);
+  var encodeResult = fischerRandomLookUp.encode(decodeResult);
+
+  print(encodeResult);
 }

@@ -1,7 +1,8 @@
 library fischerandom_chess;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export './converters.dart';
+export './lookup.dart';
+export './positions.dart';
+export './unicodes.dart';
+export './wrapper.dart';
+export './validators.dart';
