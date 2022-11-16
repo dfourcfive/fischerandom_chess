@@ -63,3 +63,35 @@ List<String> toLowerCase(dynamic arrangement) {
   }
   return converted;
 }
+
+/**
+ * Converts an arrangement of pieces from `String` to `Array`.
+ *
+ * param arrangement A starting position's arrangement
+ * returns The same arrangement as an array, or `false` if invalid
+ *    arrangement
+ */
+dynamic toArray(arrangement) {
+  if (!isValidArrangement(arrangement)) return false;
+  if (arrangement is List<String>) {
+    return arrangement;
+  } else {
+    return arrangement.runes.map((e) => String.fromCharCode(e).toString()).toList();
+  }
+}
+
+/**
+ * Converts an arrangement of pieces from `Array` to `String`.
+ *
+ * param  arrangement A starting position's arrangement
+ * return  The same arrangement as a string, or `false` if
+ *    invalid arrangement
+ */
+dynamic toString(arrangement) {
+  if (!isValidArrangement(arrangement)) return false;
+  if (arrangement is List<String>) {
+    return arrangement.join('');
+  } else {
+    return arrangement;
+  }
+}
