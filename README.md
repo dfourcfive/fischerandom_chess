@@ -49,7 +49,7 @@ Map<String, dynamic> random = fischerRandomLookUp.randomID();
 - Get the starting position's arrangement of pieces by a given ID
 
 ```dart
-FischeRandomChess fischerRandomLookUp = FischeRandomChess();
+FischeRandomChess fischeRandomChess = FischeRandomChess();
 ind id=10; //example
 var result = fischerRandomLookUp.decode(id);
 if(result==false){
@@ -62,7 +62,7 @@ if(result==false){
 - Get the starting position's arrangement of pieces by a given ID
 
 ```dart
-FischeRandomChess fischerRandomLookUp = FischeRandomChess();
+FischeRandomChess fischeRandomChess = FischeRandomChess();
 String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
 var result random = fischerRandomLookUp.encode(arrangments);
 if(result==false){
