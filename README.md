@@ -21,22 +21,55 @@ dependencies:
 ```
 
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+import the fischerandom_chess class 
+
+```dart
+import 'package:fischerandom_chess/fischerandom_chess.dart' 
+```
+
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+- Generates a random starting position, returning its ID and arrangement of pieces.
 
 ```dart
-const like = 'sample';
+FischerRandomLookUp fischerRandomLookUp = FischerRandomLookUp();
+Map<String, dynamic> random = fischerRandomLookUp.random();
+```
+
+- Picks a random starting position's ID.
+
+```dart
+FischerRandomLookUp fischerRandomLookUp = FischerRandomLookUp();
+Map<String, dynamic> random = fischerRandomLookUp.randomID();
+```
+
+- Get the starting position's arrangement of pieces by a given ID
+
+```dart
+FischeRandomChess fischerRandomLookUp = FischeRandomChess();
+ind id=10; //example
+var result = fischerRandomLookUp.decode(id);
+if(result==false){
+ //not a valid id
+}else if(result is List<String>){
+ print(result);
+}
+```
+
+- Get the starting position's arrangement of pieces by a given ID
+
+```dart
+FischeRandomChess fischerRandomLookUp = FischeRandomChess();
+String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
+var result random = fischerRandomLookUp.encode(arrangments);
+if(result==false){
+ //not a valid id
+}else if(result is int){
+ print(result);
+}
 ```
 
 ## Additional information
