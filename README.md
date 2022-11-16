@@ -2,10 +2,14 @@
 
 A Fischer Random Chess / Chess960 dart/flutter library.
 
-link to pub.dev:
-https://pub.dev/packages/fischerandom_chess
+## Story
+[Fischer random](https://en.wikipedia.org/wiki/Fischer_random_chess) chess, also known as Chess960 is a variation of the game of chess invented by the former world chess champion Bobby Fischer
+
 
 ## Installation
+
+link to pub.dev:
+https://pub.dev/packages/fischerandom_chess
 
 Run this command:
 With Flutter:
