@@ -55,9 +55,9 @@ Map<String, dynamic> random = fischerRandomLookUp.randomID();
 - Get the starting position's arrangement of pieces by a given ID
 
 ```dart
-FischeRandomChess fischeRandomChess = FischeRandomChess();
+FischerRandomLookUp randomLookUp = FischerRandomLookUp();
 ind id=10; //example
-var result = fischerRandomLookUp.decode(id);
+var result = randomLookUp.decode(id);
 if(result==false){
  //not a valid id
 }else if(result is List<String>){
@@ -68,18 +68,89 @@ if(result==false){
 - Get the starting position's arrangement of pieces by a given ID
 
 ```dart
-FischeRandomChess fischeRandomChess = FischeRandomChess();
+FischerRandomLookUp randomLookUp = FischerRandomLookUp();
 String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
-var result random = fischerRandomLookUp.encode(arrangments);
+var result = randomLookUp.encode(arrangments);
 if(result==false){
  //not a valid id
 }else if(result is int){
  print(result);
 }
 ```
+## Converters
+- toUniCode() :
+```dart
+FischerRandomConverters fischerRandomConverters = FischerRandomConverters();
+String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
+var result = fischerRandomConverters.toUnicode(arrangments);
+if(result==false){
+ //not a valid id
+}else{
+ print(result);  //output : [♗, ♗, ♕, ♘, ♘, ♖, ♔, ♖]
+
+}
+```
+
+- toMirror() :
+```dart
+FischerRandomConverters fischerRandomConverters = FischerRandomConverters();
+String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
+var result = fischerRandomConverters.toMirror(arrangments);
+if(result==false){
+ //not a valid id
+}else if(result is String){
+ print(result);  //output : 'RKRNQBBN'
+}
+```
+
+- toUpperCase() :
+```dart
+FischerRandomConverters fischerRandomConverters = FischerRandomConverters();
+String arrangments = 'nbbqnrkr'; // or ['n','b','b','q','n','r','k','r']
+var result = fischerRandomConverters.toUpperCase(arrangments);
+if(result==false){
+ //not a valid id
+}else if(result is String){
+ print(result);  //output : 'NBBQNRKR'
+}
+```
+
+
+- toLowerCase() :
+```dart
+FischerRandomConverters fischerRandomConverters = FischerRandomConverters();
+String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
+var result = fischerRandomConverters.toLowerCase(arrangments);
+if(result==false){
+ //not a valid id
+}else if(result is String){
+ print(result);  //output : 'nbbqnrkr'
+}
+```
+
+-toArray() :
+
+```dart
+FischerRandomConverters fischerRandomConverters = FischerRandomConverters();
+String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
+var result = fischerRandomConverters.toArray(arrangments);
+if(result==false){
+ //not a valid id
+}else if(result is List<String>){
+ print(result);  //output : ['N','B','B','Q','N','R','K','R']
+}
+```
+
+## Validators
+-Validates an arrangement of pieces :
+
+```dart
+FischerRandomValidators validators = FischerRandomValidators();
+String arrangments = 'NBBQNRKR'; // or ['N','B','B','Q','N','R','K','R']
+var result = validators.isValidArrangement(arrangments);
+print(result); // return true if its valid , false if its not
+```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+All contributions are welcome

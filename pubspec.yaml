@@ -1,7 +1,7 @@
 name: fischerandom_chess
-description: A new Flutter package project.
+description: A Fischer Random Chess / Chess960 dart/flutter library.
 version: 0.0.1
-homepage:
+homepage: https://github.com/dfourcfive/fischerandom_chess
 
 environment:
   sdk: ">=2.17.1 <3.0.0"
