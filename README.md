@@ -128,7 +128,7 @@ if(result==false){
 }
 ```
 
--toArray() :
+- toArray() :
 
 ```dart
 FischerRandomConverters fischerRandomConverters = FischerRandomConverters();
@@ -142,7 +142,7 @@ if(result==false){
 ```
 
 ## Validators
--Validates an arrangement of pieces :
+- Validates an arrangement of pieces :
 
 ```dart
 FischerRandomValidators validators = FischerRandomValidators();
